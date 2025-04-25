@@ -1,0 +1,155 @@
+body {
+  background-color:#334647;
+ background-image: url('https://funik.ru/wp-content/uploads/2018/10/17478da42271207e1d86.jpg');
+color:##8c8c8c;
+text-align: center;
+font-size: 17px;
+font-style: italic;
+
+
+
+
+
+
+
+}
+
+
+}
+
+@keyframes bounce {
+  0% { transform: translateY(-100%); }
+  50% { transform: translateY(10%) scaleY(1.2); }
+  100% {transform: translateY(0) scaleY(1);}
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+
+body {
+  background: ;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Roboto Slab", serif;
+}
+
+.btn {
+
+  background: black;
+  border-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.btn_item {
+  position: relative;
+  padding: 20px 40px;
+}
+
+.btn_item span {
+  position: relative;
+  display: block;
+  color: red;
+  font-weight: 800;
+  padding: 10px 15px;
+  font-size: 28px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+
+
+
+
+.btn_item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 360px;
+  height: 360px;
+  background: #e0e1dd;
+  border-radius: 50%;
+  transform: translate(-50%, -50%)
+    scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.btn_item:hover::before {
+  transform: translate(-50%, -50%)
+    scale(1);
+}
+
+.btn:hover .btn_item span {
+  color: #1a2a3a;
+}
+
+
+
+body {
+  font-family: "Roboto Slab", serif;
+}
+
+.card {
+  width: 400px;
+  height: 200px;
+  aspect-ratio: 10 / 0;
+  overflow: hidden;
+  border-radius: 14px;
+
+  display: grid;
+  grid-template-areas: "stack";
+}
+.card > * {
+  grid-area: stack;
+}
+
+.card > figcaption {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: grid;
+  align-items: end;
+  padding: 1.5rem 2rem;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(33 44 55 / 0),
+    rgb(33 44 55 / 0),
+    rgb(33 44 55 / 0.76)
+  );
+}
+
+.card figcaption {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.card:hover figcaption {
+  opacity: 1;
+}
+.card img {
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+#block {
+  background: gray;
+  border-radius: 50rem;
+  height: 100px;
+  width: 400px;
+}
+
+
+
+
