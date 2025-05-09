@@ -8,7 +8,7 @@ function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 async function switchpad(pad) {
-    if (pad == currentPad)
+    if (pad === currentPad)
         return;
     let prevPad = currentPad;
     let prevTab = tabContainer.children[prevPad];
