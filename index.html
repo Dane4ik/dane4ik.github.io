@@ -1,28 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>HTML + CSS</title>
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="fonts/material-symbols/index.css" />
     </head>
     <body>
-        <p class="Main-text"> поставьте 10 сердечек с.</p>
-        <a href="" class=main_link>ConTRise</a>
+        <div id="tabs">
+            <div class="tab" id="menu">
+                <span class="material-symbols filled">menu</span>
+                <div class="dropdown hidden">
+                    <div class="item">Главная</div>
+                    <div class="item">О нас</div>
+                    <div class="item">Наши спонсоры</div>
+                    <div class="item">Поддержать сайт</div>
+                    <div class="item">котики</div>
+
+                    <div class="close">
+                        <span class="material-symbols filled">arrow_back</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="switching_tabs">
+            <div id="home_tab" class="shown">
+                Home
+            </div>
+            <div id="about_tab" class="hidden">
+                About
+            </div>
+            <div id="sponsors_tab" class="hidden">
+                Sponsors
+            </div>
+            <div id="support_tab" class="hidden">
+                Support
+            </div>
+            <div id="cats_tab" class="hidden">
+                Cats
+            </div>
+        </div>
+
+        <!--
+        <h1>ConTRise</h1>
 
         <div id="block">
             Всем qq ребятки
         </div>
 
+        <div class="text"></div>
 
-
-        <div class="text">Передаю привет чату ContRise от Удаленного аккаунта</div>
-
-
-        <div class="btn">
-            <div class="btn_item">
-                <span>ПОДПИШИСЬ</span>
+        <a href="https://t.me/RomusX">
+            <div class="btn">
+                <div class="btn_item">
+                    <span>ПОДПИШИСЬ</span>
+                </div>
             </div>
-        </div>
+        </a> -->
+
+        <script src="Script.js"></script>
     </body>
 </html>

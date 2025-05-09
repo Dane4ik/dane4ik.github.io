@@ -1,155 +1,201 @@
-body {
-  background-color:#334647;
- background-image: url('https://funik.ru/wp-content/uploads/2018/10/17478da42271207e1d86.jpg');
-color:##8c8c8c;
-text-align: center;
-font-size: 17px;
-font-style: italic;
-
-
-
-
-
-
-
-}
-
-
-}
-
-@keyframes bounce {
-  0% { transform: translateY(-100%); }
-  50% { transform: translateY(10%) scaleY(1.2); }
-  100% {transform: translateY(0) scaleY(1);}
-}
-
-
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
 
-body {
-  background: ;
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-  margin: 0;
-  font-family: "Roboto Slab", serif;
-}
-
-.btn {
-
-  background: black;
-  border-radius: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  overflow: hidden;
-  cursor: pointer;
-  transition: background-color 0.5s ease;
-}
-
-.btn_item {
-  position: relative;
-  padding: 20px 40px;
-}
-
-.btn_item span {
-  position: relative;
-  display: block;
-  color: red;
-  font-weight: 800;
-  padding: 10px 15px;
-  font-size: 28px;
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
-}
-
-
-
-
-
-.btn_item::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 360px;
-  height: 360px;
-  background: #e0e1dd;
-  border-radius: 50%;
-  transform: translate(-50%, -50%)
-    scale(0);
-  transition: transform 0.5s ease-in-out;
-}
-
-.btn_item:hover::before {
-  transform: translate(-50%, -50%)
-    scale(1);
-}
-
-.btn:hover .btn_item span {
-  color: #1a2a3a;
-}
-
-
+/*@keyframes bounce {
+    0% {
+        transform: translateY(-100%);
+    }
+    50% {
+        transform: translateY(10%) scaleY(1.2);
+    }
+    100% {
+        transform: translateY(0) scaleY(1);
+    }
+}*/
 
 body {
-  font-family: "Roboto Slab", serif;
+    /*background-image: url('https://www.fund4dogs.ru/wp-content/uploads/2024/06/1000097411-1.jpg');*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    color: white;
+    font-size: 17px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto Slab", serif;
+    gap: 20px;
+    min-height: 100dvh;
 }
 
-.card {
-  width: 400px;
-  height: 200px;
-  aspect-ratio: 10 / 0;
-  overflow: hidden;
-  border-radius: 14px;
+/*a:has(.btn) {
+    text-decoration: none;
+    margin-top: auto;
+    margin-bottom: 20px;
 
-  display: grid;
-  grid-template-areas: "stack";
+    .btn {
+        background: white;
+        border-radius: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        cursor: pointer;
+        transition: background-color 0.5s ease;
+
+        .btn_item {
+            position: relative;
+            padding: 10px 20px;
+
+            span {
+                position: relative;
+                display: block;
+                color: red;
+                font-weight: 800;
+                padding: 10px 15px;
+                font-size: 28px;
+                letter-spacing: 1px;
+                transition: color 0.3s ease;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 360px;
+                height: 360px;
+                background: #e0e1dd;
+                border-radius: 50%;
+                transform: translate(-50%, -50%)
+                scale(0);
+                transition: transform 0.5s ease-in-out;
+            }
+
+            &:hover::before {
+                transform: translate(-50%, -50%)
+                scale(1);
+            }
+        }
+
+        &:hover .btn_item span {
+            color: #1a2a3a;
+        }
+    }
 }
-.card > * {
-  grid-area: stack;
-}
-
-.card > figcaption {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 600;
-  display: grid;
-  align-items: end;
-  padding: 1.5rem 2rem;
-  background-image: linear-gradient(
-    to bottom,
-    rgb(33 44 55 / 0),
-    rgb(33 44 55 / 0),
-    rgb(33 44 55 / 0.76)
-  );
-}
-
-.card figcaption {
-  opacity: 0;
-  transition: opacity 300ms;
-}
-
-.card:hover figcaption {
-  opacity: 1;
-}
-.card img {
-  width: 400px;
-  height: 200px;
-  object-fit: cover;
-}
-
-
-
-
-
 
 #block {
-  background: gray;
-  border-radius: 50rem;
-  height: 100px;
-  width: 400px;
+    background: gray;
+    border-radius: 50rem;
+    height: 100px;
+    width: 400px;
+}*/
+
+#tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: black;
+    padding: 15px;
+
+    .tab {
+        color: #ffffff;
+        position: relative;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        padding: 5px;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: #404040;
+        }
+
+        .material-symbols {
+            height: 24px;
+            width: 24px;
+        }
+
+        .dropdown {
+            position: fixed;
+            background-color: white;
+            color: black;
+            top: 0;
+            left: 0;
+            border-radius: 0 10px 10px 0;
+            overflow: hidden;
+            height: 100vh;
+            transition: opacity 0.25s ease, left 0.25s ease;
+            opacity: 1;
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
+
+            .item {
+                padding: 20px 10px 20px 10px;
+                cursor: pointer;
+                transition: background-color 0.25s ease;
+
+
+                &:hover {
+                    background-color: #e0e1dd;
+                }
+            }
+
+            .close {
+                color: black;
+                cursor: pointer;
+                width: 24px;
+                height: 24px;
+                padding: 10px;
+                border-radius: 10px;
+                margin: auto 10px 10px;
+                align-self: flex-end;
+
+                &:hover {
+                    background-color: #e0e1dd;
+                }
+            }
+
+            &.hidden {
+                left: -15px;
+                opacity: 0;
+                height: 0;
+            }
+
+            &.hiding {
+                left: -15px;
+                opacity: 0;
+            }
+        }
+    }
 }
 
+#switching_tabs {
+    width: 100%;
+    height: 100%;
+    position: relative;
 
+    div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.5s ease;
+    }
 
+    .hidden {
+        opacity: 0;
+        height: 0;
+    }
+
+    .hiding {
+        opacity: 0;
+    }
+
+    .shown {
+        opacity: 1;
+    }
+}
 
