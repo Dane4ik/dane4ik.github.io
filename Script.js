@@ -3,16 +3,16 @@ console.log("Hello World!");
 const menu = document.querySelector("#menu");
 const menuDropdown = document.querySelector("#menu > .dropdown");
 const tabContainer = document.querySelector("#switching_tabs");
-let currentPad = 0;
+let currentTab = 0;
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-async function switchpad(pad) {
-    if (pad === currentPad)
+async function switchTab(tab) {
+    if (tab == currentTab)
         return;
-    let prevPad = currentPad;
+    let prevPad = currentTab;
     let prevTab = tabContainer.children[prevPad];
-    let newTab = tabContainer.children[pad];
+    let newTab = tabContainer.children[tab];
     prevTab.classList.add("hiding");
     newTab.classList.add("shown");
     await delay(500);
@@ -20,7 +20,7 @@ async function switchpad(pad) {
     prevTab.classList.remove("hiding");
     prevTab.classList.add("hidden");
     newTab.classList.remove("hiding");
-    currentPad = pad;
+    currentTab = tab;
 }
 menu.addEventListener("click", async () => {
     if (menuDropdown.classList.contains("hidden")) {
@@ -34,5 +34,13 @@ menu.addEventListener("click", async () => {
     }
 });
 menuDropdown.querySelectorAll(".item").forEach((el, index) => {
-    el.addEventListener("click", async () => await switchpad(index));
+    el.addEventListener("click", async () => await switchTab(index));
 });
+function sizeTabs() {
+    Array.from(tabContainer.children).forEach((e) => {
+        const el = e;
+        el.style.minHeight = `${innerHeight - el.getBoundingClientRect().y}px`;
+    });
+}
+sizeTabs();
+addEventListener("resize", sizeTabs);

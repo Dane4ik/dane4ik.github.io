@@ -4,18 +4,18 @@ const menu = document.querySelector("#menu") as HTMLDivElement
 const menuDropdown = document.querySelector("#menu > .dropdown") as HTMLDivElement;
 const tabContainer = document.querySelector("#switching_tabs") as HTMLDivElement;
 
-let currentPad = 0;
+let currentTab = 0;
 
 function delay(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function switchpad(pad: number) {
-    if (pad == currentPad) return;
+async function switchTab(tab: number) {
+    if (tab == currentTab) return;
 
-    let prevPad = currentPad;
+    let prevPad = currentTab;
     let prevTab = tabContainer.children[prevPad];
-    let newTab = tabContainer.children[pad];
+    let newTab = tabContainer.children[tab];
 
     prevTab.classList.add("hiding")
     newTab.classList.add("shown");
@@ -27,7 +27,7 @@ async function switchpad(pad: number) {
     prevTab.classList.add("hidden");
     newTab.classList.remove("hiding");
 
-    currentPad = pad;
+    currentTab = tab;
 }
 
 menu.addEventListener("click", async () => {
@@ -42,6 +42,16 @@ menu.addEventListener("click", async () => {
 });
 
 menuDropdown.querySelectorAll(".item").forEach((el, index) => {
-    el.addEventListener("click", async () => await switchpad(index));
+    el.addEventListener("click", async () => await switchTab(index));
 });
 
+function sizeTabs() {
+    Array.from(tabContainer.children).forEach((e) => {
+        const el = e as HTMLDivElement;
+        el.style.minHeight = `${innerHeight - el.getBoundingClientRect().y}px`;
+    });
+}
+
+sizeTabs();
+
+addEventListener("resize", sizeTabs);

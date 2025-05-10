@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="TypeScriptCompiler">
-    <option name="nodeInterpreterTextField" value="$APPLICATION_CONFIG_DIR$/node/versions/23.11.0/node" />
+    <option name="nodeInterpreterTextField" value="node" />
     <option name="recompileOnChanges" value="true" />
     <option name="useTypesFromServer" value="true" />
   </component>

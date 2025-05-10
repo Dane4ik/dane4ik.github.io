@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
 
-/*@keyframes bounce {
+@keyframes bounce {
     0% {
         transform: translateY(-100%);
     }
@@ -10,7 +10,7 @@
     100% {
         transform: translateY(0) scaleY(1);
     }
-}*/
+}
 
 body {
     /*background-image: url('https://www.fund4dogs.ru/wp-content/uploads/2024/06/1000097411-1.jpg');*/
@@ -27,67 +27,6 @@ body {
     gap: 20px;
     min-height: 100dvh;
 }
-
-/*a:has(.btn) {
-    text-decoration: none;
-    margin-top: auto;
-    margin-bottom: 20px;
-
-    .btn {
-        background: white;
-        border-radius: 40px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        overflow: hidden;
-        cursor: pointer;
-        transition: background-color 0.5s ease;
-
-        .btn_item {
-            position: relative;
-            padding: 10px 20px;
-
-            span {
-                position: relative;
-                display: block;
-                color: red;
-                font-weight: 800;
-                padding: 10px 15px;
-                font-size: 28px;
-                letter-spacing: 1px;
-                transition: color 0.3s ease;
-            }
-
-            &::before {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 360px;
-                height: 360px;
-                background: #e0e1dd;
-                border-radius: 50%;
-                transform: translate(-50%, -50%)
-                scale(0);
-                transition: transform 0.5s ease-in-out;
-            }
-
-            &:hover::before {
-                transform: translate(-50%, -50%)
-                scale(1);
-            }
-        }
-
-        &:hover .btn_item span {
-            color: #1a2a3a;
-        }
-    }
-}
-
-#block {
-    background: gray;
-    border-radius: 50rem;
-    height: 100px;
-    width: 400px;
-}*/
 
 #tabs {
     display: flex;
@@ -176,7 +115,7 @@ body {
     height: 100%;
     position: relative;
 
-    div {
+    > div {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -185,17 +124,90 @@ body {
         transition: opacity 0.5s ease;
     }
 
-    .hidden {
+    > .hidden {
         opacity: 0;
-        height: 0;
+        max-height: 0 !important;
+        min-height: 0 !important;
     }
 
-    .hiding {
+    > .hiding {
         opacity: 0;
     }
 
-    .shown {
+    > .shown {
         opacity: 1;
+    }
+
+    #home_tab {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        a:has(.btn) {
+            text-decoration: none;
+            margin: auto auto 20px;
+            width: 40%;
+
+            .btn {
+                background: white;
+                border-radius: 40px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+                overflow: hidden;
+                cursor: pointer;
+                transition: background-color 0.5s ease;
+
+                .btn_item {
+                    position: relative;
+                    padding: 10px 20px;
+
+                    span {
+                        position: relative;
+                        display: block;
+                        color: red;
+                        font-weight: 800;
+                        padding: 10px 15px;
+                        font-size: 28px;
+                        letter-spacing: 1px;
+                        transition: color 0.3s ease;
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 360px;
+                        height: 360px;
+                        background: #e0e1dd;
+                        border-radius: 50%;
+                        transform: translate(-50%, -50%)
+                        scale(0);
+                        transition: transform 0.5s ease-in-out;
+                    }
+
+                    &:hover::before {
+                        transform: translate(-50%, -50%)
+                        scale(1);
+                    }
+                }
+
+                &:hover .btn_item span {
+                    color: #1a2a3a;
+                }
+            }
+        }
+
+        #block {
+            background: gray;
+            border-radius: 50rem;
+            height: 100px;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }
 
