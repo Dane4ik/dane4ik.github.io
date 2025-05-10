@@ -126,16 +126,17 @@ body {
 
     > .hidden {
         opacity: 0;
-        max-height: 0 !important;
-        min-height: 0 !important;
+
+        height: 0 !important;
     }
 
     > .hiding {
-        opacity: 0;
+        opacity: 0 !important;
     }
 
     > .shown {
         opacity: 1;
+        height: revert !important;
     }
 
     #home_tab {

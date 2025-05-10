@@ -16,10 +16,9 @@ async function switchTab(tab) {
     prevTab.classList.add("hiding");
     newTab.classList.add("shown");
     await delay(500);
-    prevTab.classList.remove("shown");
-    prevTab.classList.remove("hiding");
+    prevTab.classList.remove("shown", "hiding");
     prevTab.classList.add("hidden");
-    newTab.classList.remove("hiding");
+    newTab.classList.remove("hiding", "hidden");
     currentTab = tab;
 }
 menu.addEventListener("click", async () => {
