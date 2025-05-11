@@ -145,8 +145,8 @@ body {
         a:has(.btn) {
             text-decoration: none;
             margin: auto auto 20px;
-            width: 40%;
             user-select: none;
+            width: 272px;
 
             .btn {
                 background: white;
