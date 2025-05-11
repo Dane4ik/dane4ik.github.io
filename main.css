@@ -146,6 +146,7 @@ body {
             text-decoration: none;
             margin: auto auto 20px;
             width: 40%;
+            user-select: none;
 
             .btn {
                 background: white;
